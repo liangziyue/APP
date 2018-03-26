@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let item of list;let i=index;"(click)="goDetail(i)">
+    {{item.goodsName.slice(0,10)}}
+    <img src="{{item.goodsListImg}}" alt=""/>
+      <p>价格：￥{{item.price}}<span>已打{{item.discount}}折</span></p>
+  </li>
+</ul>
