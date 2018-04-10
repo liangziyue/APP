@@ -1,0 +1,40 @@
+page-ziya {
+
+ion-title{
+    margin-left: 25%;
+    }
+ion-slides{
+    height: auto;
+  }
+  ion-slide img{
+      margin-left: 0;
+      margin-top: 0px;
+  }
+#menu{
+      width: 50%;
+  }
+  ion-grid{
+      margin-top: 10px;
+      border:none;
+  }
+#se{
+    font-size: 26px;
+}
+.inforlist h2{
+    display:block;
+}
+.col{
+    width:25%;
+    height:100px;
+    border:1px none;
+}
+.col img{
+    width:31px;
+    height:31px;
+    margin-top:20px;
+    margin-left:25%;
+}
+.col p{
+    text-align: center;
+}
+}

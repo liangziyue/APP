@@ -1,0 +1,191 @@
+<!--
+  Generated template for the ZiyaPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- //左侧菜单栏部分： -->
+<ion-menu [content]="mycontent" > 
+  <ion-content>
+    <ion-list >
+              <ion-item>
+                <P>单选框按钮:</P>
+              </ion-item>
+            <ion-item>
+              <ion-label>Pepperoni</ion-label>
+              <ion-checkbox [(ngModel)]="pepperoni"></ion-checkbox>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Sausage</ion-label>
+              <ion-checkbox [(ngModel)]="sausage" disabled="true"></ion-checkbox>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Mushrooms</ion-label>
+              <ion-checkbox [(ngModel)]="mushrooms"></ion-checkbox>
+            </ion-item>
+            
+            <ion-item>
+              <p>注意事项：</p>
+            </ion-item>
+
+            <ion-item>
+                <ion-note item-start>
+                 写作业
+                </ion-note>
+                 资芽作业的任务
+                <ion-note item-end>
+                 写作业
+                </ion-note>
+              </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #mycontent [root]="ZiyaPage"></ion-nav>
+<ion-header no-border>
+<!-- 导航栏部分 -->
+<ion-navbar color="ziya">
+    <!-- <button ion-button menuToggle>||>></button> -->
+    <ion-toolbar>
+        <ion-buttons start>
+            <button ion-button icon-only color="royal">
+              <ion-icon name="search"></ion-icon>
+            </button>
+        </ion-buttons>
+          <ion-title>
+              <img src="../../assets/images/ziya1.png" style="height:30px;width:80px;margin-left:30%">
+          </ion-title>      
+        <ion-buttons end>
+          <button ion-button icon-only menuToggle>
+            <ion-icon name="more"></ion-icon>
+          </button>
+        </ion-buttons>
+  </ion-toolbar>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <!-- 轮播图部分 -->
+      <ion-slides pager="true" loop>
+        <ion-slide>
+         <img src="../../assets/imgs/轮播图_01.png" alt="">
+        </ion-slide>
+        <ion-slide>
+          <img src="../../assets/imgs/轮播图_01.png" alt="">
+        </ion-slide>
+        <ion-slide>
+          <img src="../../assets/imgs/轮播图_01.png" alt="">
+        </ion-slide>
+      </ion-slides>
+  <!-- 节点按钮部分 -->
+      <ion-segment [(ngModel)]="icons" color='dark'> 
+          <ion-segment-button value="info">
+            找信息
+          </ion-segment-button> 
+          <ion-segment-button value="serve"> 
+            找服务 
+          </ion-segment-button> 
+  </ion-segment>
+  <div [ngSwitch]="icons"> 
+    <ion-grid *ngSwitchCase="'info'">
+      <ion-row class="row">
+        <ion-col col-3 class="col"><img src="../../assets/imgs/xin1.png"><p>资产包转让</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/xin2.png"><p>债权转让</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/xin3.png"><p>固产转让</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/xin4.png"><p>商业保理</p></ion-col>
+      </ion-row>
+      <ion-row class="row">
+        <ion-col col-3 class="col"><img src="../../assets/imgs/xin5.png"><p>典当担保</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/xin6.png"><p>融资借贷</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/xin7.png"><p>悬赏信息</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/xin8.png"><p>尽职调查</p></ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid *ngSwitchCase="'serve'">
+      <ion-row class="row">
+        <ion-col col-3 class="col"><img src="../../assets/imgs/fu1.png"><p>资产包收购</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/fu2.png"><p>催收机构</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/fu3.png"><p>律师事务所</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/fu4.png"><p>保理公司</p></ion-col>
+      </ion-row>
+      <ion-row class="row">
+        <ion-col col-3 class="col"><img src="../../assets/imgs/fu5.png"><p>资金过桥</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/fu6.png"><p>投资贷款</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/fu7.png"><p>固定收购</p></ion-col>
+        <ion-col col-3 class="col"><img src="../../assets/imgs/xin8.png"><p>尽职调查</p></ion-col>
+      </ion-row>
+    </ion-grid>
+</div>
+<ion-list>
+  <ion-item>
+    <!-- 列表部分 -->
+    <ion-avatar item-start>
+      <img src="../../assets/imgs/you.png">
+    </ion-avatar>
+    <h2>优质信息</h2>
+  </ion-item>
+  <ion-item class="tit"><p>资产包转让 --FB001</p></ion-item>
+  <button ion-item>
+    <ion-thumbnail item-start>
+      <img src="../../assets/imgs/xin1.png">
+    </ion-thumbnail>
+    <p>地区：北京</p>
+    <p>来源：银行</p>
+    <p>类型：抵押</p>    
+    <div item-end style="float:right">
+      <h2 item-end style="color:red">500万</h2>
+      <p style="margin-left:8px">总金额</p>
+    </div>
+    <div item-end style="float:right">
+        <h2 item-end style="color:red">300万</h2>
+        <p style="margin-left:8px">转让价</p>
+    </div>     
+  </button>
+  <ion-item class="tit"><p>委外催收 --FB001</p></ion-item>
+  <button ion-item>
+    <ion-thumbnail item-start>
+      <img src="../../assets/imgs/wei.png">
+    </ion-thumbnail>
+    <p>地区：北京</p>
+    <p>状态：已诉讼</p>
+    <p>类型：个人</p>    
+    <div item-end style="float:right">
+      <h2 item-end style="color:red">100</h2>
+      <p style="margin-left:8px">金额</p>
+    </div>
+    <div item-end style="float:right">
+        <h2 item-end style="color:red">15%-30%</h2>
+        <p style="margin-left:8px">佣金比例</p>
+    </div>     
+  </button>
+  <ion-item class="tit"><p>法律服务 --FB001</p></ion-item>
+  <button ion-item>
+    <ion-thumbnail item-start>
+      <img src="../../assets/imgs/fa.png">
+    </ion-thumbnail>
+    <p>地区：北京</p>
+    <p>类型：民事</p>    
+    <div item-end style="float:right">
+      <h2 item-end style="color:red">咨询</h2>
+      <p style="margin-left:8px">需求</p>
+    </div>    
+  </button>
+</ion-list>
+<!--   上拉刷新和下拉加载效果部分 -->
+    <ion-list>
+        <ion-item *ngFor="let i of items">{{i}}</ion-item>
+      </ion-list>
+       <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+         <ion-infinite-scroll-content
+           loadingSpinner="bubbles"
+           loadingText="Loading more data...">
+         </ion-infinite-scroll-content>
+       </ion-infinite-scroll>
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+         <ion-refresher-content
+           pullingIcon="arrow-dropdown"
+           pullingText="Pull to refresh"
+           refreshingSpinner="circles"
+           refreshingText="Refreshing...">
+         </ion-refresher-content>
+       </ion-refresher>
+</ion-content>
